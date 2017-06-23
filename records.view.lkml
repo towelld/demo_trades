@@ -107,7 +107,17 @@ view: records {
   }
   dimension: country {
     type: string
-    sql: substring(${TABLE}.Currency,1,2) ;;
+    sql: case substring(${TABLE}.Currency,1,2) when 'AU' then 'AUS'
+                                               when 'CA' then 'CAN'
+                                               when 'CH' then 'CHE'
+                                               when 'EU' then 'EUE'
+                                               when 'GB' then 'GBR'
+                                               when 'HK' then 'HKG'
+                                               when 'JP' then 'JPN'
+                                               when 'NZ' then 'NZL'
+                                               when 'SG' then 'SGP'
+                                               when 'US' then 'USA'
+                                              end ;;
   }
 
   dimension: date_time_created {
