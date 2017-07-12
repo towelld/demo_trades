@@ -19,7 +19,7 @@
       title: USD Map Summary
       left: 0
       top: 0
-      height: 4
+      height: 8
       width: 24
       type: looker_geo_choropleth
       model: demo_trades
@@ -76,3 +76,19 @@
       series_types: {}
       colors: [orange, red]
       empty_color: grey
+
+    - name: trade_summary
+      title: USD Summary
+      left: 0
+      top: 8
+      height: 8
+      width: 24
+      type: table
+      model: demo_trades
+      explore: records
+      dimensions: [records.country]
+      measures: [records.sum_amount_usd]
+      sorts: [records.sum_amount_usd desc]
+      limit: '500'
+      column_limit: '50'
+      query_timezone: Europe/London
