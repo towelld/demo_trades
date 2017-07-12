@@ -81,7 +81,7 @@
       title: USD Summary
       left: 0
       top: 8
-      height: 8
+      height: 4
       width: 24
       type: table
       model: demo_trades
