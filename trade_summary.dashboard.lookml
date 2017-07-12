@@ -19,7 +19,7 @@
       title: USD Map Summary
       left: 0
       top: 0
-      height: 8
+      height: 6
       width: 24
       type: looker_geo_choropleth
       model: demo_trades
