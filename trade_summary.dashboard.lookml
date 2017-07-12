@@ -20,7 +20,7 @@
       left: 0
       top: 0
       height: 4
-      width: 6
+      width: 24
       type: looker_geo_choropleth
       model: demo_trades
       explore: records
