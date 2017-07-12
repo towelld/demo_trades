@@ -336,6 +336,7 @@ view: records {
     type: sum
     sql: ${amount_usd};;
     drill_fields: [rec_name]
+    value_format_name: usd
   }
   measure: count_matched {
     type: sum
