@@ -86,7 +86,7 @@
       type: table
       model: demo_trades
       explore: records
-      dimensions: [records.country]
+      dimensions: [records.country_name]
       measures: [records.sum_amount_usd]
       sorts: [records.sum_amount_usd desc]
       limit: '500'
