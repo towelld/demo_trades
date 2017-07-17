@@ -119,6 +119,20 @@ view: records {
                                                when 'US' then 'USA'
                                               end ;;
   }
+  dimension: country_name {
+    type: string
+    sql: case substring(${TABLE}.Currency,1,2) when 'AU' then 'Australia'
+                                               when 'CA' then 'Canada'
+                                               when 'CH' then 'Switzerland'
+                                               when 'EU' then 'France'
+                                               when 'GB' then 'United Kingdom'
+                                               when 'HK' then 'Hong Kong'
+                                               when 'JP' then 'Japan'
+                                               when 'NZ' then 'New Zealand'
+                                               when 'SG' then 'Singapore'
+                                               when 'US' then 'United States of America'
+                                              end ;;
+  }
 
   dimension: date_time_created {
     type: string
