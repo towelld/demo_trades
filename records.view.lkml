@@ -323,39 +323,59 @@ view: records {
 
   measure: count {
     type: count
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
 
   measure: count_percent {
     type: percent_of_total
     sql: ${count};;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
   measure: sum_amount {
     type: sum
     sql: ${amount};;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
   measure: average_amount {
     type: average
     sql: ${amount};;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
   measure: sum_amount_gbp {
     type: sum
     sql: ${amount_gbp};;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
   measure: sum_amount_usd {
     type: sum
     sql: ${amount_usd};;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
     value_format_name: usd
   }
   measure: count_matched {
     type: sum
     sql: ${TABLE}.ActiveStatus;;
-    drill_fields: [rec_name]
+    drill_fields: [trade_record*]
   }
+
+  set: trade_record {
+    fields: [
+      system,
+      account,
+      buy_sell,
+      trade_ref,
+      quantity,
+      asset_type,
+      asset_code,
+      asset_description,
+      currency,
+      price,
+      amount,
+      commission,
+      trade_date,
+      settlement_date
+    ]
+  }
+
 
 }
