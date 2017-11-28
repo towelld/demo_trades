@@ -15,12 +15,13 @@
   filters:
 
   elements:
+
     - name: trade_summary_map
-      title: USD Map Summary
+      title: Trading MAP Summary (USD)
       left: 0
       top: 0
       height: 6
-      width: 24
+      width: 18
       type: looker_geo_choropleth
       model: demo_trades
       explore: records
@@ -76,6 +77,45 @@
       series_types: {}
       colors: [orange, red]
       empty_color: grey
+
+    - name: trade_summary_pie
+      title: Trading Summary (USD)
+      left: 18
+      top: 0
+      height: 6
+      width: 6
+      model: demo_trades
+      explore: records
+      type: looker_pie
+      fields: [records.country_name, records.sum_amount_usd]
+      sorts: [records.sum_amount_usd desc]
+      limit: 500
+      value_labels: legend
+      label_type: labPer
+      stacking: ''
+      show_value_labels: false
+      label_density: 25
+      legend_position: center
+      x_axis_gridlines: false
+      y_axis_gridlines: true
+      show_view_names: true
+      limit_displayed_rows: false
+      y_axis_combined: true
+      show_y_axis_labels: true
+      show_y_axis_ticks: true
+      y_axis_tick_density: default
+      y_axis_tick_density_custom: 5
+      show_x_axis_label: true
+      show_x_axis_ticks: true
+      x_axis_scale: auto
+      y_axis_scale_mode: linear
+      ordering: none
+      show_null_labels: false
+      show_totals_labels: false
+      show_silhouette: false
+      totals_color: "#808080"
+      series_types: {}
+
 
     - name: trade_summary
       title: USD Summary
