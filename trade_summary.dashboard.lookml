@@ -21,7 +21,7 @@
       left: 0
       top: 0
       height: 6
-      width: 18
+      width: 16
       type: looker_geo_choropleth
       model: demo_trades
       explore: records
@@ -80,10 +80,10 @@
 
     - name: trade_summary_pie
       title: Trading Summary (USD)
-      left: 18
+      left: 16
       top: 0
       height: 6
-      width: 6
+      width: 8
       model: demo_trades
       explore: records
       type: looker_pie
