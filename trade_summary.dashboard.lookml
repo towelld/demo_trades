@@ -117,7 +117,7 @@
       series_types: {}
 
     - name: trade_summary_bar
-      title: Summary (USD)
+      title: Currency Summary (USD)
       left: 0
       top: 6
       height: 6
@@ -125,9 +125,9 @@
       model: demo_trades
       explore: records
       type: looker_column
-      fields: [records.country_name, records.sum_amount_usd]
-      pivots: [records.country_name]
-      sorts: [records.sum_amount_usd desc 0, records.country_name]
+      fields: [records.sum_amount_usd, records.currency]
+      pivots: [records.currency]
+      sorts: [records.sum_amount_usd desc 0, records.currency]
       limit: 500
       stacking: ''
       show_value_labels: false
@@ -165,6 +165,7 @@
               name: Switzerland, axisId: records.sum_amount_usd}, {id: United Kingdom,
               name: United Kingdom, axisId: records.sum_amount_usd}, {id: United States
                 of America, name: United States of America, axisId: records.sum_amount_usd}]}]
+
 
     - name: trade_summary
       title: Summary (USD)
