@@ -117,7 +117,7 @@
       series_types: {}
 
     - name: trade_summary_bar
-      title: Currency Summary (USD)
+      title: Currency Summary
       left: 0
       top: 6
       height: 6
@@ -125,14 +125,13 @@
       model: demo_trades
       explore: records
       type: looker_column
-      fields: [records.sum_amount_usd, records.currency]
-      pivots: [records.currency]
-      sorts: [records.sum_amount_usd desc 0, records.currency]
+      fields: [records.currency, records.sum_amount, records.sum_amount_usd]
+      sorts: [records.currency]
       limit: 500
       stacking: ''
       show_value_labels: false
       label_density: 25
-      legend_position: center
+      legend_position: right
       x_axis_gridlines: false
       y_axis_gridlines: true
       show_view_names: true
@@ -142,7 +141,7 @@
       show_y_axis_ticks: true
       y_axis_tick_density: default
       y_axis_tick_density_custom: 5
-      show_x_axis_label: true
+      show_x_axis_label: false
       show_x_axis_ticks: true
       x_axis_scale: auto
       y_axis_scale_mode: linear
@@ -154,17 +153,16 @@
       value_labels: legend
       label_type: labPer
       series_types: {}
-      y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Australia,
-              name: Australia, axisId: records.sum_amount_usd}, {id: Canada, name: Canada,
-              axisId: records.sum_amount_usd}, {id: China, name: China, axisId: records.sum_amount_usd},
-            {id: France, name: France, axisId: records.sum_amount_usd}, {id: Japan, name: Japan,
-              axisId: records.sum_amount_usd}, {id: New Zealand, name: New Zealand, axisId: records.sum_amount_usd},
-            {id: Singapore, name: Singapore, axisId: records.sum_amount_usd}, {id: Switzerland,
-              name: Switzerland, axisId: records.sum_amount_usd}, {id: United Kingdom,
-              name: United Kingdom, axisId: records.sum_amount_usd}, {id: United States
-                of America, name: United States of America, axisId: records.sum_amount_usd}]}]
+      y_axes: [{label: Currency Amount, maxValue: !!null '', minValue: !!null '', orientation: left,
+          showLabels: true, showValues: true, tickDensity: default, tickDensityCustom: !!null '',
+          type: log, unpinAxis: false, valueFormat: !!null '', series: [{id: records.sum_amount,
+              name: Records Sum Amount, axisId: records.sum_amount}]}, {label: USD Amount,
+          maxValue: !!null '', minValue: !!null '', orientation: right, showLabels: true,
+          showValues: true, tickDensity: default, tickDensityCustom: !!null '', type: linear,
+          unpinAxis: false, valueFormat: !!null '', series: [{id: records.sum_amount_usd,
+              name: Records Sum Amount USD, axisId: records.sum_amount_usd}]}]
+      hide_legend: true
+
 
 
     - name: trade_summary
