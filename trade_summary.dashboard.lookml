@@ -21,7 +21,7 @@
       left: 0
       top: 0
       height: 6
-      width: 16
+      width: 12
       type: looker_geo_choropleth
       model: demo_trades
       explore: records
@@ -83,7 +83,7 @@
       left: 16
       top: 0
       height: 6
-      width: 8
+      width: 12
       model: demo_trades
       explore: records
       type: looker_pie
