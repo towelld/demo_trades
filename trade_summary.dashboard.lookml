@@ -75,7 +75,7 @@
       show_silhouette: false
       totals_color: "#808080"
       series_types: {}
-      colors: [orange, red]
+      colors: [green, orange, red]
       empty_color: grey
 
     - name: trade_summary_pie
