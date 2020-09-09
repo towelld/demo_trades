@@ -110,7 +110,7 @@ view: records {
     sql: case substring(${TABLE}.Currency,1,2) when 'AU' then 'AUS'
                                                when 'CA' then 'CAN'
                                                when 'CH' then 'CHE'
-                                               when 'EU' then 'GER'
+                                               when 'EU' then 'DEU'
                                                when 'GB' then 'GBR'
                                                when 'HK' then 'CHN'
                                                when 'JP' then 'JPN'
