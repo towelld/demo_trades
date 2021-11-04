@@ -192,3 +192,12 @@
       conditional_formatting_include_totals: false
       conditional_formatting_include_nulls: false
       conditional_formatting: []
+      series_cell_visualizations:
+        records.sum_amount_usd:
+          is_active: true
+          palette:
+            palette_id: 8951697f-453c-ab72-4810-d508a5c69951
+            collection_id: gresham
+            custom_colors:
+            - "#eaa153"
+            - "#de5454"
