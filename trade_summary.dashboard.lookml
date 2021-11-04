@@ -171,7 +171,7 @@
       top: 12
       height: 6
       width: 24
-      type: table
+      type: looker_grid
       model: demo_trades
       explore: records
       dimensions: [records.country_name]
